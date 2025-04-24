@@ -119,7 +119,7 @@ section {
 .skills-category ul li:hover {
   transform: translateY(-5px);
   background: var(--accent);
-  color: var(--bg-primary);
+  color: white; /* Alterando para branco no hover */
   box-shadow: 0 10px 20px rgba(197, 134, 192, 0.2);
 }
 
@@ -224,6 +224,89 @@ section {
 .contact-item:hover a,
 .contact-item:hover span {
   color: var(--accent);
+}
+
+/* Experience redesign */
+.experience-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.experience-item {
+  background: var(--grid-bg);
+  padding: 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.experience-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(197, 134, 192, 0.15);
+  border-color: var(--accent);
+}
+
+.experience-item h3 {
+  color: var(--accent);
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+  letter-spacing: -0.01em;
+}
+
+.experience-item h4 {
+  color: var(--text-primary);
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.experience-item .period {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.experience-item .period::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+
+.experience-item ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.experience-item ul li {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  background: var(--card-bg);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.experience-item ul li:hover {
+  color: white;
+  background: var(--accent);
+  transform: translateX(5px);
 }
 
 /* Scrollbar */
