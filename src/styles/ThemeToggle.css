@@ -11,7 +11,7 @@
 }
 
 .theme-flip-label {
-  background-color: #111;
+  background-color: #2b2d42;
   border-radius: 50px;
   cursor: pointer;
   display: flex;
@@ -24,12 +24,17 @@
   transform: scale(1.5);
 }
 
+[data-theme='light'] .theme-flip-label {
+  background-color: #e9ecef;
+  border: 1px solid #dee2e6;
+}
+
 .theme-flip-label .fa-sun {
-  color: #f1c40f;
+  color: #ffd43b;
 }
 
 .theme-flip-label .fa-moon {
-  color: #f1c40f;
+  color: #ffd43b;
 }
 
 .theme-flip-label i {
@@ -48,8 +53,16 @@
   transition: transform 0.2s linear;
 }
 
+[data-theme='light'] .theme-flip-ball {
+  background-color: #4361ee;
+}
+
 .theme-flip-checkbox:checked + .theme-flip-label .theme-flip-ball {
   transform: translateX(24px);
+}
+
+.theme-flip-checkbox:checked + .theme-flip-label {
+  border-color: #4361ee;
 }
 
 .theme-flip-label:active .theme-flip-ball {

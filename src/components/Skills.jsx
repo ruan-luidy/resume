@@ -32,7 +32,9 @@ function Skills() {
       title: "Desenvolvimento",
       skills: [
         "JavaScript",
+        "TypeScript",
         "React",
+        "Python",
         "C#",
         "C/C++",
         "Lua",
