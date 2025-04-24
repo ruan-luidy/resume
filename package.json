@@ -1,9 +1,12 @@
 {
   "name": "resume",
   "private": true,
+  "homepage": "https://ruan-luidy.github.io/resume",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "reusme -d build",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
