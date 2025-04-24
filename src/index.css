@@ -37,8 +37,14 @@ body {
 section {
   padding: 80px 0;
   opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  transform: translateY(20px); /* Reduzindo a distância da animação */
+  animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation-play-state: paused;
+  animation-delay: calc(var(--section-index, 0) * 0.2s); /* Adicionando delay sequencial */
+}
+
+section.visible {
+  animation-play-state: running;
 }
 
 @keyframes fadeInUp {
@@ -124,6 +130,11 @@ section {
 }
 
 /* Projects redesign */
+.projects {
+  margin-top: 60px; /* Adicionando margem superior para evitar sobreposição */
+  padding-top: 40px; /* Padding extra para maior espaçamento */
+}
+
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
