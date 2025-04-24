@@ -1,32 +1,17 @@
-import React, { useEffect } from "react";
+import React from 'react';
+import './App.css';
 import Header from './components/Header';
 import About from './components/About';
-import Experience from './components/Experience';
 import Skills from './components/Skills';
+import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
-import './index.css';
+import ThemeToggle from './components/ThemeToggle';
 
 function App() {
-  useEffect(() => {
-    const sections = document.querySelectorAll('section');
-    
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry, index) => {
-        if (entry.isIntersecting) {
-          entry.target.style.setProperty('--section-index', index);
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.1 });
-
-    sections.forEach(section => observer.observe(section));
-
-    return () => sections.forEach(section => observer.unobserve(section));
-  }, []);
-
   return (
-    <div>
+    <div className="App">
+      <ThemeToggle />
       <Header />
       <About />
       <Experience />

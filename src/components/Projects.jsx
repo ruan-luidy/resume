@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import useInView from '../hooks/useInView';
 
 function Projects() {
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef);
+
   return (
-    <section className="projects">
+    <section ref={sectionRef} className={`projects ${isInView ? 'visible' : ''}`}>
       <div className="container">
         <h2>Realizações</h2>
         <div className="project-grid">

@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600&display=swap');
 
 :root {
+  /* Tema escuro (padrão) */
   --bg-primary: #1e1e1e;
   --bg-secondary: #252526;
   --accent: #3264db;
@@ -10,6 +11,18 @@
   --card-bg: #2d2d2d;
   --hover: #383838;
   --grid-bg: rgba(197, 134, 192, 0.05);
+}
+
+[data-theme='light'] {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f5f5;
+  --accent: #2850b5;
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --border: #e0e0e0;
+  --card-bg: #ffffff;
+  --hover: #f0f0f0;
+  --grid-bg: rgba(197, 134, 192, 0.03);
 }
 
 * {

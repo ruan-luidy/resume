@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import useInView from '../hooks/useInView';
 
 function Skills() {
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef);
+
   const skillGroups = [
     {
       title: "PCP & Produção",
@@ -48,7 +52,7 @@ function Skills() {
   ];
 
   return (
-    <section className="skills">
+    <section ref={sectionRef} className={`skills ${isInView ? 'visible' : ''}`}>
       <div className="container">
         <h2>Habilidades</h2>
         

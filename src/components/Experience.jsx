@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import useInView from '../hooks/useInView';
 
 function Experience() {
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef);
+
   return (
-    <section className="experience">
+    <section ref={sectionRef} className={`experience ${isInView ? 'visible' : ''}`}>
       <div className="container">
         <h2>Experiência</h2>
         <div className="experience-grid">

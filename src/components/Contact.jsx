@@ -1,7 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import useInView from '../hooks/useInView';
 
 function Contact() {
   const [copyStatus, setCopyStatus] = useState('');
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef);
   
   const handleEmailClick = async () => {
     const email = 'ruan.liidy23@gmail.com';
@@ -9,14 +12,14 @@ function Contact() {
       await navigator.clipboard.writeText(email);
       setCopyStatus('Email copiado!');
       setTimeout(() => setCopyStatus(''), 2000);
-    } catch (err) {
+    } catch {
       setCopyStatus('Erro ao copiar');
       setTimeout(() => setCopyStatus(''), 2000);
     }
   };
 
   return (
-    <section className="contact">
+    <section ref={sectionRef} className={`contact ${isInView ? 'visible' : ''}`}>
       <div className="container">
         <h2>Contato</h2>
         <div className="contact-info">

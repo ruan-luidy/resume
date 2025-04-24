@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import useInView from '../hooks/useInView';
 
 function About() {
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef);
+
   return (
-    <section className="about">
+    <section ref={sectionRef} className={`about ${isInView ? 'visible' : ''}`}>
       <div className="container">
         <h2>Sobre Mim</h2>
         <div className="about-content">
