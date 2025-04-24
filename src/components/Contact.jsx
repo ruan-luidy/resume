@@ -8,7 +8,7 @@ function Contact() {
         <div className="contact-info">
           <div className="contact-item">
             <i className="fas fa-envelope"></i>
-            <span>seu-email@exemplo.com</span>
+            <span> ruan.liidy23@gmail.com</span>
           </div>
           <div className="contact-item">
             <i className="fab fa-linkedin"></i>
@@ -16,7 +16,7 @@ function Contact() {
           </div>
           <div className="contact-item">
             <i className="fab fa-github"></i>
-            <a href="https://github.com/seu-usuario" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://github.com/ruan-luidy" target="_blank" rel="noopener noreferrer">GitHub</a>
           </div>
         </div>
       </div>
