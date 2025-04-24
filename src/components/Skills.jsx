@@ -38,6 +38,7 @@ function Skills() {
     {
       title: "Soft Skills",
       skills: [
+        "Rápida Aprendizagem",
         "Resolução de problemas",
         "Comunicação interdepartamental",
         "Análise crítica",

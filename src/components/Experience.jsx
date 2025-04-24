@@ -9,7 +9,7 @@ function Experience() {
           <div className="experience-item">
             <h3>Analista PCP Jr</h3>
             <h4>Centerline</h4>
-            <p className="period">2020 - Presente</p>
+            <p className="period">2023 - Presente</p>
             
             <div className="experience-content">
               <div className="achievements-list">

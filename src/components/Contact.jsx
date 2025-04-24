@@ -12,7 +12,7 @@ function Contact() {
           </div>
           <div className="contact-item">
             <i className="fab fa-linkedin"></i>
-            <a href="https://linkedin.com/in/seu-perfil" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/ruan-luidy-1a177a281/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </div>
           <div className="contact-item">
             <i className="fab fa-github"></i>

@@ -442,3 +442,64 @@ section.visible {
     -webkit-backdrop-filter: blur(20px);
   }
 }
+
+/* About section */
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.about-card {
+  background: var(--grid-bg);
+  padding: 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.about-card p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+.about-highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.about-highlights .highlight-item {
+  background: var(--grid-bg);
+  padding: 30px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: all 0.3s ease;
+}
+
+.about-highlights .highlight-item:hover {
+  transform: translateY(-5px);
+  background: var(--accent);
+}
+
+.about-highlights .highlight-item i {
+  font-size: 1.5rem;
+  color: var(--accent);
+}
+
+.about-highlights .highlight-item:hover i {
+  color: white;
+}
+
+.about-highlights .highlight-item span {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
+
+.about-highlights .highlight-item:hover span {
+  color: white;
+}
