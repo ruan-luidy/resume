@@ -263,11 +263,13 @@ section.visible {
   font-size: 1.1rem;
   text-decoration: none;
   transition: color 0.3s ease;
+  cursor: pointer;
 }
 
 .contact-item:hover a,
-.contact-item:hover span {
-  color: var(--accent);
+.contact-item:hover span,
+.contact-item:hover i {
+  color: white;
 }
 
 /* Experience redesign */
