@@ -1,11 +1,22 @@
 import React, { useState, useEffect } from 'react';
-import '../styles/ThemeToggle.css';
+import { FiSun, FiMoon } from 'react-icons/fi';
 
 function ThemeToggle() {
   const [theme, setTheme] = useState('dark');
 
   useEffect(() => {
+    // Carregar tema do localStorage, se existir
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      setTheme(savedTheme);
+    }
+  }, []);
+
+  useEffect(() => {
+    // Aplicar tema atual
     document.documentElement.setAttribute('data-theme', theme);
+    // Salvar no localStorage
+    localStorage.setItem('theme', theme);
   }, [theme]);
 
   const toggleTheme = () => {
@@ -14,18 +25,17 @@ function ThemeToggle() {
 
   return (
     <div className="theme-toggle">
-      <input
-        type="checkbox"
-        id="theme-flip"
-        className="theme-flip-checkbox"
-        checked={theme === 'light'}
-        onChange={toggleTheme}
-      />
-      <label htmlFor="theme-flip" className="theme-flip-label">
-        <i className="fas fa-sun"></i>
-        <i className="fas fa-moon"></i>
-        <div className="theme-flip-ball"></div>
-      </label>
+      <button 
+        onClick={toggleTheme} 
+        className={`theme-toggle-button ${theme}`}
+        aria-label={`Mudar para tema ${theme === 'dark' ? 'claro' : 'escuro'}`}
+      >
+        {theme === 'dark' ? (
+          <FiSun className="theme-icon" />
+        ) : (
+          <FiMoon className="theme-icon" />
+        )}
+      </button>
     </div>
   );
 }
