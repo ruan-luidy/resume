@@ -7,8 +7,7 @@ import Skills from './components/Skills';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
-import PDFButton from './components/ImprovedPDFButton';
-import ImprovedPDFButton from './components/ImprovedPDFButton';
+import PDFButton from './components/PDFButton'; // Novo componente PDFButton
 
 function App() {
   return (
@@ -20,7 +19,7 @@ function App() {
       <Skills />
       <Projects />
       <Contact />
-      <ImprovedPDFButton />
+      <PDFButton /> {/* Substituímos o ImprovedPDFButton pelo novo PDFButton */}
     </div>
   );
 }
