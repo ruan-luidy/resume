@@ -9,7 +9,7 @@ function DownloadButton() {
   const [showTooltip, setShowTooltip] = useState(false);
   
   // Caminho para o arquivo PDF (você precisa colocar o arquivo na pasta public)
-  const pdfPath = '/ruan-luidy-cv.pdf';
+  const pdfPath = './ruan-luidy-cv.pdf';
   
   const handleDownload = (e) => {
     // Se já estiver gerando, não faz nada
