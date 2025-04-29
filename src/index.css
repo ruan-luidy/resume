@@ -1193,15 +1193,83 @@ html {
   z-index: 90;
   cursor: pointer;
   transition: all 0.3s ease;
+  overflow: visible;
 }
 
 .pdf-download-button:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(50, 100, 219, 0.4);
+  background: var(--accent-hover);
+}
+
+.pdf-download-button:active {
+  transform: translateY(-1px);
 }
 
 .pdf-download-button .button-icon {
   font-size: 1.1rem;
+}
+
+/* Estado de geração do PDF */
+.pdf-download-button.generating {
+  background: #666;
+  cursor: not-allowed;
+  opacity: 0.9;
+}
+
+.pdf-download-button.generating:hover {
+  transform: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Animação de rotação para o ícone de loading */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinning {
+  animation: spin 1.5s linear infinite;
+}
+
+/* Tooltip de sucesso */
+.pdf-tooltip {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #43a047;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.pdf-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #43a047 transparent transparent transparent;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .pdf-download-button {
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 16px;
+    font-size: 0.8rem;
+  }
 }
 
 /* Hide certain elements when generating PDF */

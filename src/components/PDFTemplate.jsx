@@ -1,51 +1,57 @@
 // src/components/PDFTemplate.jsx
 import React, { forwardRef } from 'react';
-import { FaTasks, FaChartLine, FaCogs } from 'react-icons/fa';
 
-// This component won't be rendered in the UI
-// It's just a template for the PDF generation
+// Este componente não será renderizado na UI
+// É apenas um template para a geração do PDF
 const PDFTemplate = forwardRef((props, ref) => {
   return (
     <div ref={ref} className="pdf-template">
+      {/* Cabeçalho com informações pessoais */}
       <div className="pdf-header">
         <h1>Ruan Luidy Bueno de Melo</h1>
-        <h2>Analista PCP Jr - Centerline</h2>
-        <div className="pdf-contact-info">
-          <p>Email: ruan.liidy23@gmail.com</p>
-          <p>LinkedIn: linkedin.com/in/ruan-luidy-1a177a281</p>
-          <p>GitHub: github.com/ruan-luidy</p>
-        </div>
-      </div>
-
-      <div className="pdf-section">
-        <h2>Sobre Mim</h2>
-        <p>
-          Como Analista PCP Jr na Centerline, sou responsável por planejar e controlar 
-          a produção, garantindo a eficiência dos processos e a qualidade dos produtos.
-        </p>
+        <h2>Analista PCP Jr | Desenvolvedor</h2>
         
-        <div className="pdf-highlights">
-          <div className="pdf-highlight-item">
-            <span>Planejamento estratégico de produção</span>
+        <div className="pdf-contact">
+          <div className="pdf-contact-item">
+            <span className="pdf-contact-icon">✉️</span>
+            <span>ruan.liidy23@gmail.com</span>
           </div>
-          <div className="pdf-highlight-item">
-            <span>Otimização de processos industriais</span>
+          <div className="pdf-contact-item">
+            <span className="pdf-contact-icon">🔗</span>
+            <span>linkedin.com/in/ruan-luidy-1a177a281</span>
           </div>
-          <div className="pdf-highlight-item">
-            <span>Gestão de recursos e operações</span>
+          <div className="pdf-contact-item">
+            <span className="pdf-contact-icon">🔗</span>
+            <span>github.com/ruan-luidy</span>
           </div>
         </div>
       </div>
 
+      {/* Resumo profissional */}
       <div className="pdf-section">
-        <h2>Experiência</h2>
+        <h3>Resumo Profissional</h3>
+        <p>
+          Analista PCP Jr na Centerline com experiência em planejamento e controle de produção, 
+          desenvolvimento de soluções tecnológicas para otimização de processos industriais 
+          e implementação de melhorias em sistemas de gestão. Conhecimentos técnicos em programação 
+          e automação aplicados ao ambiente de manufatura.
+        </p>
+      </div>
+
+      {/* Experiência profissional */}
+      <div className="pdf-section">
+        <h3>Experiência Profissional</h3>
         <div className="pdf-experience">
-          <h3>Analista PCP Jr</h3>
-          <h4>Centerline</h4>
-          <p>2023 - Presente</p>
+          <div className="pdf-experience-header">
+            <div>
+              <h4>Analista PCP Jr</h4>
+              <h5>Centerline</h5>
+            </div>
+            <span className="pdf-date">2023 - Presente</span>
+          </div>
           
-          <div className="pdf-achievements">
-            <div className="pdf-achievement">
+          <div className="pdf-responsibilities">
+            <div className="pdf-responsibility">
               <h5>Planejamento e Controle da Produção</h5>
               <ul>
                 <li>Análise e planejamento da capacidade produtiva</li>
@@ -55,7 +61,7 @@ const PDFTemplate = forwardRef((props, ref) => {
               </ul>
             </div>
 
-            <div className="pdf-achievement">
+            <div className="pdf-responsibility">
               <h5>Gestão de Materiais e Estoque</h5>
               <ul>
                 <li>Controle de estoque de matéria-prima e produtos</li>
@@ -64,8 +70,8 @@ const PDFTemplate = forwardRef((props, ref) => {
                 <li>Otimização do fluxo de materiais</li>
               </ul>
             </div>
-
-            <div className="pdf-achievement">
+            
+            <div className="pdf-responsibility">
               <h5>Análise e Documentação Técnica</h5>
               <ul>
                 <li>Interpretação de desenhos técnicos</li>
@@ -74,95 +80,94 @@ const PDFTemplate = forwardRef((props, ref) => {
                 <li>Análise de especificações técnicas</li>
               </ul>
             </div>
-
-            <div className="pdf-achievement">
-              <h5>Gestão de Processos Produtivos</h5>
-              <ul>
-                <li>Acompanhamento dos indicadores de produção</li>
-                <li>Identificação e solução de gargalos</li>
-                <li>Implementação de melhorias no processo</li>
-                <li>Coordenação com diferentes setores</li>
-              </ul>
-            </div>
           </div>
         </div>
       </div>
 
+      {/* Projetos e realizações */}
       <div className="pdf-section">
-        <h2>Habilidades</h2>
-        <div className="pdf-skills">
+        <h3>Projetos e Realizações</h3>
+        
+        <div className="pdf-projects">
+          <div className="pdf-project">
+            <h4>Sistema de Controle de Sobras</h4>
+            <p>
+              Desenvolvimento de aplicativo para controle e rastreamento de sobras de materiais 
+              de projetos, permitindo melhor reaproveitamento e redução de custos.
+            </p>
+            <ul>
+              <li>Catalogação automática de sobras por projeto</li>
+              <li>Análise de utilização e economia gerada</li>
+              <li>Integração com sistema de estoque principal</li>
+            </ul>
+          </div>
+
+          <div className="pdf-project">
+            <h4>Sequenciador de Produção</h4>
+            <p>
+              Aplicativo para sequenciamento inteligente de máquinas, otimizando 
+              a utilização dos recursos e melhorando o fluxo produtivo.
+            </p>
+            <ul>
+              <li>Algoritmo de ordenação por prioridade e setup</li>
+              <li>Redução de 30% no tempo de parada</li>
+              <li>Interface simplificada para operadores</li>
+            </ul>
+          </div>
+
+          <div className="pdf-project">
+            <h4>Automações para PCP</h4>
+            <p>
+              Desenvolvimento de ferramentas e scripts para automatizar tarefas 
+              repetitivas do PCP, aumentando a eficiência da equipe.
+            </p>
+            <ul>
+              <li>Geração automática de relatórios</li>
+              <li>Extração de dados de desenhos técnicos</li>
+              <li>Integração entre sistemas legados</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* Habilidades */}
+      <div className="pdf-section">
+        <h3>Habilidades</h3>
+        
+        <div className="pdf-skills-container">
           <div className="pdf-skill-group">
-            <h3>PCP & Produção</h3>
+            <h4>PCP & Produção</h4>
             <div className="pdf-skill-tags">
-              <span className="pdf-skill">Planejamento e controle de produção</span>
-              <span className="pdf-skill">Gestão de ordens de fabricação</span>
-              <span className="pdf-skill">Análise de dados de produção</span>
-              <span className="pdf-skill">Interação com sistemas ERP</span>
-              <span className="pdf-skill">Leitura de desenhos técnicos</span>
-              <span className="pdf-skill">Sequenciamento de produção</span>
-              <span className="pdf-skill">Controle de estoque</span>
-              <span className="pdf-skill">Gestão de processos industriais</span>
+              <span className="pdf-skill-tag">Planejamento e controle de produção</span>
+              <span className="pdf-skill-tag">Gestão de ordens de fabricação</span>
+              <span className="pdf-skill-tag">Análise de dados de produção</span>
+              <span className="pdf-skill-tag">Interação com sistemas ERP</span>
+              <span className="pdf-skill-tag">Leitura de desenhos técnicos</span>
+              <span className="pdf-skill-tag">Sequenciamento de produção</span>
+              <span className="pdf-skill-tag">Controle de estoque</span>
+              <span className="pdf-skill-tag">Gestão de processos industriais</span>
             </div>
           </div>
           
           <div className="pdf-skill-group">
-            <h3>Desenvolvimento</h3>
+            <h4>Desenvolvimento</h4>
             <div className="pdf-skill-tags">
-              <span className="pdf-skill">JavaScript</span>
-              <span className="pdf-skill">TypeScript</span>
-              <span className="pdf-skill">React</span>
-              <span className="pdf-skill">Python</span>
-              <span className="pdf-skill">C#</span>
-              <span className="pdf-skill">C/C++</span>
-              <span className="pdf-skill">Lua</span>
-              <span className="pdf-skill">SQL</span>
+              <span className="pdf-skill-tag">JavaScript</span>
+              <span className="pdf-skill-tag">TypeScript</span>
+              <span className="pdf-skill-tag">React</span>
+              <span className="pdf-skill-tag">Python</span>
+              <span className="pdf-skill-tag">C#</span>
+              <span className="pdf-skill-tag">C/C++</span>
+              <span className="pdf-skill-tag">Lua</span>
+              <span className="pdf-skill-tag">SQL</span>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="pdf-section">
-        <h2>Realizações</h2>
-        <div className="pdf-projects">
-          <div className="pdf-project">
-            <h3>Otimização do Fluxo Produtivo</h3>
-            <p>
-              Implementação de melhorias no processo de planejamento e controle da produção, 
-              resultando em maior eficiência operacional.
-            </p>
-            <ul>
-              <li>Redução no tempo de setup das máquinas</li>
-              <li>Maior agilidade na resposta a mudanças</li>
-              <li>Melhor precisão no planejamento</li>
-            </ul>
-          </div>
-
-          <div className="pdf-project">
-            <h3>Gestão de Estoque Eficiente</h3>
-            <p>
-              Desenvolvimento de sistema de controle e organização do estoque, 
-              garantindo disponibilidade de materiais e redução de custos.
-            </p>
-            <ul>
-              <li>Melhor organização do almoxarifado</li>
-              <li>Redução de perdas e desperdícios</li>
-              <li>Controle preciso do inventário</li>
-            </ul>
-          </div>
-
-          <div className="pdf-project">
-            <h3>Documentação e Processos</h3>
-            <p>
-              Padronização e documentação de processos produtivos, 
-              facilitando treinamentos e garantindo qualidade consistente.
-            </p>
-            <ul>
-              <li>Criação de procedimentos padrão</li>
-              <li>Processos mais consistentes</li>
-              <li>Maior controle de qualidade</li>
-            </ul>
-          </div>
-        </div>
+      {/* Rodapé com informações */}
+      <div className="pdf-footer">
+        <p>Ruan Luidy Bueno de Melo • Analista PCP Jr • ruan.liidy23@gmail.com</p>
       </div>
     </div>
   );
