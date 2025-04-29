@@ -7,7 +7,7 @@ import Skills from './components/Skills';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
-import PDFButton from './components/PDFButton'; // Novo componente PDFButton
+import PDFButton from './components/DownloadButton'; // Novo componente PDFButton
 
 function App() {
   return (
